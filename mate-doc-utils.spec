@@ -13,7 +13,9 @@ BuildRequires:	mate-common
 BuildRequires:	intltool >= 0.25
 BuildRequires:	xsltproc
 BuildRequires:	python-libxml2
+BuildRequires:	libxml2-utils
 Requires:	python-libxml2
+Requires:	libxml2-utils
 BuildArch:	noarch
 
 %description
