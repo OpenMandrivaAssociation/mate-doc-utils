@@ -59,9 +59,6 @@ NOCONFIGURE=yes ./autogen.sh
 
 %make
 
-%check
-%make check
-
 %install
 %makeinstall_std
 
