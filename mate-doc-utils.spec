@@ -1,7 +1,7 @@
 Summary:	MATE XML documentation utilities
 Name:		mate-doc-utils
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Graphical desktop/Other
 URL:		http://www.mate-desktop.org
