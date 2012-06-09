@@ -1,7 +1,7 @@
 Summary:	MATE XML documentation utilities
 Name:		mate-doc-utils
 Version:	1.2.1
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		Graphical desktop/Other
 URL:		http://www.mate-desktop.org
@@ -72,7 +72,6 @@ NOCONFIGURE=yes ./autogen.sh
 %{_datadir}/mate-doc-utils/watermarks
 %dir %{_datadir}/xml/
 %{_datadir}/xml/mate
-%{_datadir}/xml/mallard
 # mate help files
 %{_datadir}/mate/help
 
@@ -90,4 +89,6 @@ NOCONFIGURE=yes ./autogen.sh
 %{_datadir}/mate-doc-utils/mate-doc-utils.make
 %{_datadir}/mate-doc-utils/templates
 %{_datadir}/mate-doc-utils/template*.*
+# this conflicts with gnome-doc-utils
+%{_datadir}/xml/mallard
 
