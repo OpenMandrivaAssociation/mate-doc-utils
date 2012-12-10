@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
 URL:		http://www.mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/1.4/%{name}-%{version}.tar.xz
+Source0:	http://pub.mate-desktop.org/releases/%{lua: print (string.match(rpm.expand("%{version}"),"%d+.%d+"))}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
 BuildRequires:	docbook-dtd44-xml
@@ -72,8 +72,6 @@ NOCONFIGURE=yes ./autogen.sh
 %{_datadir}/mate-doc-utils/watermarks
 %dir %{_datadir}/xml/
 %{_datadir}/xml/mate
-# mate help files
-%{_datadir}/mate/help
 
 %files xml2po
 %doc xml2po/AUTHORS xml2po/ChangeLog xml2po/COPYING xml2po/NEWS xml2po/README
@@ -91,4 +89,26 @@ NOCONFIGURE=yes ./autogen.sh
 %{_datadir}/mate-doc-utils/template*.*
 # this conflicts with gnome-doc-utils
 %{_datadir}/xml/mallard
+
+
+
+%changelog
+* Fri Jul 27 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.4.0-1
++ Revision: 811303
+- new version 1.4.0
+
+* Sat Jun 09 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.1-3
++ Revision: 804180
+- rebuild moved conflicting files with gnome-doc-utils to the dev pkg
+
+* Fri Jun 08 2012 Matthew Dawkins <mattydaw@mandriva.org> 1.2.1-2
++ Revision: 803384
+- bump release
+- rebuild splitting out xml2po and devel pkgs
+- the xml2po pkg is still gonna conflict with the gnome-doc-utils one
+- but atleast mate-doc-utils and gnome-doc-utils should not conflict
+
+* Mon Apr 23 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.2.1-1
++ Revision: 793006
+- imported package mate-doc-utils
 
