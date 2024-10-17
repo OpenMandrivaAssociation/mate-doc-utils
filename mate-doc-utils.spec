@@ -4,7 +4,7 @@ Version:	1.4.0
 Release:	1
 License:	GPLv3+
 Group:		Graphical desktop/Other
-URL:		http://www.mate-desktop.org
+URL:		https://www.mate-desktop.org
 Source0:	http://pub.mate-desktop.org/releases/%{lua: print (string.match(rpm.expand("%{version}"),"%d+.%d+"))}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
